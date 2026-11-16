@@ -58,6 +58,12 @@ const routes = [
     meta: { titulo: 'Acerca de' }
   },
   {
+    path: '/privacidad',
+    name: 'Privacidad',
+    component: () => import('../views/PrivacidadView.vue'),
+    meta: { titulo: 'Privacidad y condiciones' }
+  },
+  {
     // Ruta comodín: cualquier URL que no exista muestra la página 404
     path: '/:pathMatch(.*)*',
     name: 'NoEncontrado',

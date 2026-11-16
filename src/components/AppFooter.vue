@@ -8,6 +8,7 @@
       <p class="footer-texto">
         ISEC · Diseño Multimedial · {{ anio }} — Recetas externas por
         <a href="https://www.themealdb.com" target="_blank" rel="noopener">TheMealDB</a>
+        · <router-link to="/privacidad">Privacidad</router-link>
       </p>
     </div>
   </footer>
