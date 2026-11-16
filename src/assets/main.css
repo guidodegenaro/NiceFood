@@ -1,0 +1,305 @@
+/* =========================================================
+   Estilos globales de NiceFood (mobile-first)
+   Paleta y tipografía tomadas del sistema de diseño (DESIGN.md)
+   ========================================================= */
+:root {
+  --verde: #2d6a4f;          /* primario: navegación y marca */
+  --verde-oscuro: #1b4332;
+  --verde-suave: #e8f2ec;
+  --terracota: #e76f51;      /* secundario: acciones principales */
+  --terracota-oscuro: #d05c3e;
+  --terracota-suave: #fdebe5;
+  --mostaza: #e9c46a;        /* terciario: estrellas y destacados */
+  --mostaza-suave: #fbf3dc;
+  --texto: #1f2937;
+  --texto-suave: #6b7280;
+  --fondo: #fafaf8;          /* "pergamino" */
+  --superficie: #ffffff;
+  --piedra: #f4f4f0;
+  --borde: #e5e7eb;
+  --error: #ba1a1a;
+  --error-suave: #ffdad6;
+
+  --radio-sm: 8px;
+  --radio: 12px;
+  --radio-lg: 16px;
+  --radio-xl: 24px;
+  --sombra-1: 0 2px 8px rgba(31, 41, 55, 0.04), 0 1px 2px rgba(31, 41, 55, 0.03);
+  --sombra-2: 0 8px 24px rgba(231, 111, 81, 0.12), 0 4px 10px rgba(31, 41, 55, 0.06);
+  --sombra-3: 0 16px 36px rgba(31, 41, 55, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden; /* cero desbordamiento horizontal */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 16px; /* 16px evita el zoom automático en celulares */
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--verde);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.material-symbols-rounded {
+  font-size: 22px;
+  line-height: 1;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Contenedor central con ancho máximo */
+.contenedor {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.seccion {
+  margin: 32px 0;
+}
+
+.seccion-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.seccion-titulo h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* ---------- Botones (mínimo 44px de alto para el dedo) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1.5px solid transparent;
+  border-radius: var(--radio-lg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, border-color 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primario {
+  background: var(--terracota);
+  color: #fff;
+}
+
+.btn-primario:hover {
+  background: var(--terracota-oscuro);
+}
+
+.btn-secundario {
+  background: var(--verde);
+  color: #fff;
+}
+
+.btn-secundario:hover {
+  background: var(--verde-oscuro);
+}
+
+.btn-contorno {
+  background: transparent;
+  border-color: var(--borde);
+  color: var(--texto);
+}
+
+.btn-contorno:hover {
+  border-color: var(--verde);
+  color: var(--verde);
+}
+
+.btn-peligro {
+  background: var(--error);
+  color: #fff;
+}
+
+.btn-icono {
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+}
+
+/* ---------- Formularios ---------- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  background: var(--superficie);
+  border: 1.5px solid var(--borde);
+  border-radius: var(--radio);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.input:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px var(--verde-suave);
+}
+
+.input.con-error {
+  border-color: var(--error);
+  background: #fffafa;
+}
+
+.mensaje-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: var(--error);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.mensaje-error .material-symbols-rounded {
+  font-size: 16px;
+}
+
+.ayuda {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+/* ---------- Chips / etiquetas ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--piedra);
+  border: 1px solid var(--borde);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chip-verde {
+  background: var(--verde-suave);
+  border-color: transparent;
+  color: var(--verde);
+}
+
+.chip-mostaza {
+  background: var(--mostaza-suave);
+  border-color: transparent;
+  color: #7a5c00;
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-1);
+}
+
+/* Grilla de tarjetas: 1 columna en celular, 2 en tablet, 3 en escritorio */
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenedor {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grilla {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .contenedor {
+    padding: 0 40px;
+  }
+}
+
+/* ---------- Transiciones reutilizables ---------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
