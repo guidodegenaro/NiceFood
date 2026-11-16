@@ -6,8 +6,9 @@ Práctica Profesionalizante Desarrollo Web y Mobile · ISEC · Prof. Facundo Rom
 
 ## Integrantes
 
-- _Integrante 1_ (completar)
-- _Integrante 2_ (completar)
+- Guido De Genaro
+
+**App online:** https://nicefood-sigma.vercel.app
 
 ## Descripción
 
@@ -16,7 +17,8 @@ buscarlas por nombre, ingrediente o autor; filtrarlas por categoría; ordenarlas
 calificarlas con estrellas y dejar comentarios. Además incluye una sección **Explorar** que consume la API
 pública [TheMealDB](https://www.themealdb.com/api.php) para descubrir recetas del mundo e importarlas al recetario.
 
-Todos los datos se guardan en el **LocalStorage** del navegador, así que persisten al cerrar la pestaña.
+Los datos se guardan en **Supabase** (PostgreSQL), con login de Google, así toda la comunidad ve las mismas
+recetas. Además se guarda una copia en el **LocalStorage** para poder verlas sin conexión.
 
 ## Tecnologías utilizadas
 
@@ -77,7 +79,26 @@ npm run build      # genera la versión de producción en /dist
 
 ## Capturas de pantalla
 
-_Agregar capturas en una carpeta `capturas/` (celular, tablet y escritorio)._
+### Celular
+
+<p>
+  <img src="capturas/celular-inicio.png" width="200" alt="Inicio en celular">
+  <img src="capturas/celular-recetas.png" width="200" alt="Listado en celular">
+  <img src="capturas/celular-detalle.png" width="200" alt="Detalle en celular">
+  <img src="capturas/celular-ingresar.png" width="200" alt="Ingresar con Google en celular">
+</p>
+
+### Tablet
+
+<img src="capturas/tablet-recetas.png" width="420" alt="Listado en tablet">
+
+### Escritorio
+
+![Inicio](capturas/escritorio-inicio.png)
+![Listado de recetas](capturas/escritorio-recetas.png)
+![Detalle de receta](capturas/escritorio-detalle.png)
+![Explorar (API TheMealDB)](capturas/escritorio-explorar.png)
+![Acerca de](capturas/escritorio-acerca.png)
 
 ## Estructura
 

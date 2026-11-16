@@ -34,7 +34,7 @@
 
           <div class="autor-fila">
             <span class="avatar">{{ receta.autor.charAt(0) }}</span>
-            <div>
+            <div class="autor-info">
               <strong>{{ receta.autor }}</strong>
               <small>Publicada el {{ fechaFormateada }}</small>
             </div>
@@ -345,7 +345,7 @@ export default {
   border-bottom: 1px solid var(--borde);
 }
 
-.autor-fila div {
+.autor-info {
   display: flex;
   flex-direction: column;
   line-height: 1.3;

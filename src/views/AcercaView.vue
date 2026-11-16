@@ -68,8 +68,7 @@ export default {
   emits: ['notificar'],
   data() {
     return {
-      // TODO: reemplazar con los nombres reales del grupo
-      integrantes: ['Integrante 1', 'Integrante 2'],
+      integrantes: ['Guido De Genaro'],
       tecnologias: ['Vue 3', 'Vue CLI', 'Vue Router 4', 'JavaScript', 'CSS (mobile-first)', 'Supabase', 'Google Auth', 'LocalStorage', 'Fetch API', 'TheMealDB', 'GitHub', 'Vercel'],
       modoNube,
       cantidadRecetas: 0,
