@@ -41,6 +41,12 @@ body {
   overflow-x: hidden; /* cero desbordamiento horizontal */
 }
 
+/* Reserva siempre el lugar de la barra de scroll: así las páginas cortas
+   (sin barra) y las largas (con barra) quedan centradas en el mismo lugar */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   font-size: 16px; /* 16px evita el zoom automático en celulares */
